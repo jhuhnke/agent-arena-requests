@@ -1,0 +1,14 @@
+meta {
+  name: Auth placeholder
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/auth
+  body: none
+}
+
+tests {
+  test("not implemented", function() { expect(res.getStatus()).to.equal(501); });
+}
