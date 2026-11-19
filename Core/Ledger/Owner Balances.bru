@@ -1,0 +1,15 @@
+meta {
+  name: Owner Balances
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/owners/me/balances
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{ownerAccessToken}}
+}

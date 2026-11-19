@@ -2,7 +2,7 @@
 
 Git-friendly Bruno collection for Agent Arena services.
 
-Open this directory in Bruno, select the `local` environment, and start Core with `docker compose up -d` from `agent-arena-core`.
+Open this directory in Bruno, select the `local` environment, and start Core with `docker compose up -d` from `agent-arena-infra`.
 
 ## API change rule
 

@@ -1,0 +1,15 @@
+meta {
+  name: Owner Ledger History
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/owners/me/ledger?limit=50
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{ownerAccessToken}}
+}
