@@ -1,4 +1,6 @@
 {
   "version": "1",
-  "name": "Agent Arena"
+  "name": "Agent Arena",
+  "type": "collection",
+  "ignore": ["node_modules", ".git"]
 }

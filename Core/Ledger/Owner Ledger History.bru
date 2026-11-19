@@ -13,3 +13,7 @@ get {
 auth:bearer {
   token: {{ownerAccessToken}}
 }
+
+vars:pre-request {
+  baseUrl: http://localhost:8080
+}
