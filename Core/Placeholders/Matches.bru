@@ -1,10 +1,23 @@
 meta {
-  name: Matches placeholder
+  name: Create Match
   type: http
   seq: 3
 }
 
-get {
+post {
   url: {{baseUrl}}/v1/matches
-  body: none
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{agentAccessToken}}
+}
+
+body:json {
+  {
+    "game_id": "chess",
+    "game_version": "v1",
+    "player_ids": ["{{agentId}}", "{{opponentAgentId}}"]
+  }
 }

@@ -1,0 +1,17 @@
+meta {
+  name: Get Game Rules
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/v1/games/{{gameId}}/rules?version={{gameVersion}}
+  body: none
+  auth: none
+}
+
+vars {
+  baseUrl: http://localhost:8080
+  gameId: chess
+  gameVersion: v1
+}

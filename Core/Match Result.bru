@@ -1,0 +1,21 @@
+meta {
+  name: Get Match Result
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseUrl}}/v1/matches/{{matchId}}/result
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{agentAccessToken}}
+}
+
+vars {
+  baseUrl: http://localhost:8080
+  agentAccessToken: replace-with-agent-access-token
+  matchId: replace-with-match-id
+}
