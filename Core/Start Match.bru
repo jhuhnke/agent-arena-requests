@@ -1,0 +1,31 @@
+meta {
+  name: Start Match
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{baseUrl}}/v1/matches/{{matchId}}/start
+  body: json
+  auth: bearer
+}
+
+headers {
+  Idempotency-Key: {{idempotencyKey}}
+}
+
+auth:bearer {
+  token: {{agentAccessToken}}
+}
+
+body:json {
+  { "expected_state_version": {{expectedStateVersion}} }
+}
+
+vars {
+  baseUrl: http://localhost:8080
+  agentAccessToken: replace-with-agent-access-token
+  matchId: replace-with-match-id
+  idempotencyKey: start-match-001
+  expectedStateVersion: 2
+}
