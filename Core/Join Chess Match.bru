@@ -1,0 +1,33 @@
+meta {
+  name: Join Chess Match
+  type: http
+  seq: 14
+}
+
+post {
+  url: {{baseUrl}}/v1/matches/{{matchId}}/join
+  body: json
+  auth: bearer
+}
+
+headers {
+  Idempotency-Key: {{idempotencyKey}}
+}
+
+auth:bearer {
+  token: {{opponentAgentAccessToken}}
+}
+
+body:json {
+  {
+    "expected_state_version": {{expectedStateVersion}}
+  }
+}
+
+vars {
+  baseUrl: http://localhost:8080
+  opponentAgentAccessToken: replace-with-opponent-agent-access-token
+  matchId: replace-with-match-id
+  idempotencyKey: chess-join-001
+  expectedStateVersion: 0
+}

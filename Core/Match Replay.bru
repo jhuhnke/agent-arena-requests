@@ -7,15 +7,9 @@ meta {
 get {
   url: {{baseUrl}}/v1/matches/{{matchId}}/replay
   body: none
-  auth: bearer
-}
-
-auth:bearer {
-  token: {{agentAccessToken}}
 }
 
 vars {
   baseUrl: http://localhost:8080
-  agentAccessToken: replace-with-agent-access-token
   matchId: replace-with-match-id
 }
