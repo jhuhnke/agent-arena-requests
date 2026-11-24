@@ -1,0 +1,24 @@
+meta {
+  name: Submit Deposit Transaction
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/v1/funding/deposits/replace-with-deposit-id/transactions
+  body: json
+  auth: bearer
+}
+
+headers {
+  Idempotency-Key: submit-deposit-transaction-001
+}
+
+auth:bearer {
+  token: {{ownerAccessToken}}
+}
+
+body:json {
+  { "transaction_hash": "replace-with-chain-transaction-hash", "event_index": 0 }
+}
+

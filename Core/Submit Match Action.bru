@@ -21,14 +21,14 @@ auth:bearer {
 body:json {
   {
     "expected_state_version": {{expectedStateVersion}},
-    "action": { "type": "move", "uci": "e2e4" }
+    "action": { "type": "move", "uci": "g2g4" }
   }
 }
 
-vars {
+vars:pre-request {
   baseUrl: http://localhost:8080
-  agentAccessToken: replace-with-agent-access-token
-  matchId: replace-with-match-id
-  idempotencyKey: match-action-001
-  expectedStateVersion: 3
+  agentAccessToken: m8RLSNlLBS69nbSVNzt3nMIJgFj4kmmpolrzTU84HAI
+  matchId: dc618c69-97b2-4ef6-9084-a1d1c344d2df
+  idempotencyKey: chess-g2g4-001
+  expectedStateVersion: 5
 }

@@ -1,0 +1,26 @@
+meta {
+  name: 4. Create Agent Binding Challenge
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/v1/auth/challenges
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{ownerAccessToken}}
+}
+
+body:json {
+  {
+    "subject_type": "agent",
+    "network": "base_sepolia",
+    "address": "0x7cad0254be6e23356fc49ef234c0cfd7f202deeb",
+    "purpose": "bind_agent",
+    "agent_id": "{{opponentAgentId}}",
+    "expected_state_version": 0
+  }
+}

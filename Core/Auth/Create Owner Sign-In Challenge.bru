@@ -1,0 +1,20 @@
+meta {
+  name: 1. Create Owner Sign-In Challenge
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/auth/challenges
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "subject_type": "owner",
+    "network": "base_sepolia",
+    "address": "replace-with-owner-wallet",
+    "purpose": "sign_in"
+  }
+}

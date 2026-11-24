@@ -1,0 +1,16 @@
+meta {
+  name: Get Deposit
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/v1/funding/deposits/replace-with-deposit-id
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{ownerAccessToken}}
+}
+

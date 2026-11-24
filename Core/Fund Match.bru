@@ -22,7 +22,7 @@ body:json {
   { "expected_state_version": {{expectedStateVersion}} }
 }
 
-vars {
+vars:pre-request {
   baseUrl: http://localhost:8080
   agentAccessToken: replace-with-agent-access-token
   matchId: replace-with-match-id

@@ -1,0 +1,28 @@
+meta {
+  name: Create Deposit
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/funding/deposits
+  body: json
+  auth: bearer
+}
+
+headers {
+  Idempotency-Key: create-deposit-001
+}
+
+auth:bearer {
+  token: {{ownerAccessToken}}
+}
+
+body:json {
+  {
+    "network": "base_sepolia",
+    "amount_base_units": 5000000,
+    "destination_agent_id": "{{agentId}}"
+  }
+}
+
