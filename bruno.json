@@ -1,6 +1,4 @@
 {
   "version": "1",
-  "name": "Agent Arena",
-  "type": "collection",
-  "ignore": ["node_modules", ".git"]
+  "name": "agent-arena-requests"
 }

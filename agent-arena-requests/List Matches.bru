@@ -1,0 +1,15 @@
+meta {
+  name: List Matches
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/v1/matches?limit=50
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{agentAccessToken}}
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Get Match
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/v1/matches/{{matchId}}
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{agentAccessToken}}
+}

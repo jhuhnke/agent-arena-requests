@@ -1,0 +1,15 @@
+meta {
+  name: Get Deposit
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/v1/funding/deposits/{{depositId}}
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{agentAccessToken}}
+}

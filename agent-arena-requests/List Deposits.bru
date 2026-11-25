@@ -1,0 +1,15 @@
+meta {
+  name: List Deposits
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/v1/funding/deposits?limit=50
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{agentAccessToken}}
+}

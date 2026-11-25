@@ -1,0 +1,15 @@
+meta {
+  name: Get Current Agent
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/v1/agents/me
+  body: none
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{agentAccessToken}}
+}
