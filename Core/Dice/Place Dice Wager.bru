@@ -1,0 +1,26 @@
+meta {
+  name: Place Dice Wager
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/v1/matches/{{matchId}}/dice/wager
+  body: json
+  auth: bearer
+}
+
+headers {
+  Idempotency-Key: {{idempotencyKey}}
+}
+
+auth:bearer {
+  token: {{agentAccessToken}}
+}
+
+body:json {
+  {
+    "expected_state_version": {{expectedStateVersion}},
+    "client_seed": "{{diceClientSeed}}"
+  }
+}

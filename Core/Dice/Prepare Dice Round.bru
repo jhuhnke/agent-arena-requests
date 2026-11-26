@@ -1,0 +1,23 @@
+meta {
+  name: Prepare Dice Round
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/v1/matches/{{matchId}}/dice/round
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{agentAccessToken}}
+}
+
+body:json {
+  {
+    "side": "low",
+    "wager_base_units": 100000,
+    "client_commitment": "{{diceClientCommitment}}"
+  }
+}
